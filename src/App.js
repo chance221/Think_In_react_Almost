@@ -21,7 +21,7 @@ class App extends Component {
             name: 'Toyota Corolla 1.5v',
             cost: 1150.98
           },
-        Display: {
+        "Display": {
             name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
             cost: 1500
           }
@@ -29,12 +29,12 @@ class App extends Component {
     }
   }
 
-  updateFeature(itemsSelected, newValue) {
+  updateFeature = (itemsSelected, newValue) =>{
     
     console.log(`updating features`)
-    const selected = Object.assign({}, itemsSelected);
+    
     selected[itemsSelected] = newValue;
-    console.log('varible selected=',selected)
+    //console.log('varible selected=',selected)
     this.setState({
       selected
     });
@@ -102,11 +102,12 @@ class App extends Component {
           itemsSelected = {this.state.selected}
           features = {this.props.features}
           handleUpdateSelectedFeatures = { (features, itemsSelected)=>this.updateSelectedFeatures(this.props.features, this.state.selected)}
-          handleUpdateSummary ={(itemsSelected)=> this.updateFeature(itemsSelected)}
+          handleUpdateSummary ={this.updateFeature}
         />
         <Summary
          itemsSelected = {this.state.selected}
          features = {this.props.features}
+  
          
         />
         </main>

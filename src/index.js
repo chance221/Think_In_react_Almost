@@ -34,7 +34,7 @@ const FEATURES = {
       cost: 1345
     }
   ],
-  Display: [
+  "Display": [
     {
       name: '15.6" UHD (3840 x 2160) 60Hz Bright Lights and Knobs',
       cost: 1500
