@@ -29,14 +29,16 @@ class App extends Component {
     }
   }
 
-  updateFeature = (itemsSelected, newValue) =>{
+  updateFeature = (category, item) =>{
     
     console.log(`updating features`)
     
-    selected[itemsSelected] = newValue;
     //console.log('varible selected=',selected)
     this.setState({
-      selected
+      selected: {
+        ...this.state.selected,
+        [category]: item,
+      }
     });
   }
 

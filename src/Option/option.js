@@ -22,7 +22,7 @@ class Option extends Component{
             return <li key={index} className="feature__item">
                 <div className={featureClass}
                 
-                onClick={e => this.props.onSelect(this.props.name, item[myKey])}>
+                onClick={e => this.props.onSelect(this.props.name, item)}>
                     { item.name }
                     ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
                     .format(item.cost) })
