@@ -13,11 +13,10 @@ class Option extends Component{
 
         const myKey = this.props.name;
 
-        // console.log('selected[myKey] = ', selected[myKey])
-        // console.log('this.props.selected=', this.props.selected)
 
         const options = this.props.features[myKey].map((item, index) => {
-            const selectedClass = item.name === selected[myKey] ? 'feature__selected' : '';
+            
+            const selectedClass = item.name === selected[myKey].name ? 'feature__selected' : '';
             const featureClass = 'feature__option ' + selectedClass;
             return <li key={index} className="feature__item">
                 <div className={featureClass}

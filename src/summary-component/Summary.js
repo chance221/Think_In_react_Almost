@@ -12,14 +12,17 @@ class Summary extends Component{
                 itemsSelected = {this.props.itemsSelected}
                 key = {myKey} 
                 name= {myKey}
-                total = {this.props.total}
                 />)
-        console.log('this.props.itemsSelected')
+        
+        // const total = Object.keys(this.props.itemsSelected)
+        // .reduce((acc, curr) => {console.log('this.props.itemsSelected[curr].cost', this.props.itemsSelected[curr].cost, acc)
+        //      return((this.props.itemsSelected[curr].cost += this.props.itemsSelected[curr].cost))
+        // 
         const total = Object.keys(this.props.itemsSelected)
-        .reduce((acc, curr) => {console.log('this.props.itemsSelected[curr]', this.props.itemsSelected[curr].cost, acc)
-            return ((acc + this.props.itemsSelected[curr].cost), this.props.itemsSelected[curr].cost )
-        }); 
-        return(
+  
+        .reduce((acc, curr) => acc + this.props.itemsSelected[curr].cost, 0);
+    ; 
+         return(
             <section className="main__summary">
                 <h3>NEW GREENLEAF 2018</h3>
                 

@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 
 export default class SummaryItem extends Component{
-
-    render(
-        
-
-    )
+    render()
     {
         return(
             <div className="summary__option" key= {this.props.name}>
@@ -16,7 +12,5 @@ export default class SummaryItem extends Component{
                       .format(this.props.itemsSelected[this.props.name].cost) }
         </div>
         </div>)
-        
     }
-
 }
