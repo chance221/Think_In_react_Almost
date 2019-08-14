@@ -6,7 +6,7 @@ class Summary extends Component{
     
     render(){
         
-        //console.log('Object.keys(this.props.itemsSelected)', Object.keys(this.props.itemsSelected))
+        
         const selected = Object.keys(this.props.itemsSelected).map(myKey=>
             <SummaryItem
                 itemsSelected = {this.props.itemsSelected}
@@ -14,10 +14,7 @@ class Summary extends Component{
                 name= {myKey}
                 />)
         
-        // const total = Object.keys(this.props.itemsSelected)
-        // .reduce((acc, curr) => {console.log('this.props.itemsSelected[curr].cost', this.props.itemsSelected[curr].cost, acc)
-        //      return((this.props.itemsSelected[curr].cost += this.props.itemsSelected[curr].cost))
-        // 
+        
         const total = Object.keys(this.props.itemsSelected)
   
         .reduce((acc, curr) => acc + this.props.itemsSelected[curr].cost, 0);
